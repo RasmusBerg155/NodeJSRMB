@@ -6,7 +6,7 @@
 const letters = ["a","b","c"];
 // show b in the console 
 
-console.log(letters[1]);
+// console.log(letters[1]);
 
 
 // --------------------------------------
@@ -22,7 +22,7 @@ friends.push({name: "Emil" })
 
 // Eller: friends.push({name : "John"}, {name : "Thomas"}, {name: "Emil"})
 
-console.log(friends)
+// console.log(friends)
 
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 
@@ -32,7 +32,8 @@ const significantMathNumbers = [0, 2.718, 3.14159, 1729];
 // You want to programmatically find where the number 1729 is in the array.
 // programmatically means that no finger counting allowed. There is a method for this (finding index based of value). 
 
-console.log(significantMathNumbers.indexOf(1729));
+// console.log(significantMathNumbers.indexOf(1729));
+
 // --------------------------------------
 // Exercise 4 - Inserting elements
 
@@ -42,7 +43,8 @@ const diet = ["tomato", "cucumber", "rocket"];
 
 diet.splice(2, 0, "hamburger", "soda", "pizza");
 
-console.log(diet);
+// console.log(diet);
+
 // --------------------------------------
 // Exercise 5 - Remove element
 
@@ -52,11 +54,16 @@ console.log(diet);
 
 diet.pop();
 
+// console.log(diet);
 
 // --------------------------------------
 // Exercise 6 - Copy array
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
+
+let dinnerTray = diet.slice();
+
+// console.log(dinnerTray);
 
 
 
@@ -67,7 +74,9 @@ const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
 
-
+/* for (let i = 1; i < lettersExpanded.length; i+=2) {
+    console.log(lettersExpanded[i]);
+} */
 
 // --------------------------------------
 // Exercise 8 - For loop and if statement
@@ -79,6 +88,13 @@ const discardedNumbers = [];
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers
 
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 6 || numbers[i] < 0) {
+        console.log(numbers[i]);
+    } else {
+        discardedNumbers.push(numbers[i]);
+    }
+}
+console.log(discardedNumbers);
+
 // --------------------------------------
-
-
