@@ -46,4 +46,14 @@ app.get("/favoriteNumber/:number", (req, res) => {
     });
 });
 
+// HTTP Methos        Endpoints            Does What?
+// GET                /malwares            Retrieves all malwares
+// GET                /malwares/:1         Retrieves malware by id 1
+// POST               /malwares            Create a new malware ressource
+// PUT                /malwares/:1         Updates a malware fully
+// PATCH              /malwares/:1         Updates a malware partially
+// DELETE             /malwares/:1         Deletes a malware by id 1
+
+
+
 app.listen(3000);
