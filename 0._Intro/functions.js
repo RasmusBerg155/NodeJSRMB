@@ -33,11 +33,28 @@ interact(anonymousFunctionGreeting);
 
 // call interact with another interaction (any type of interaction is allowed)
 
-interact(function poke() {
+/* interact(function poke() {
     console.log("Heya");
-});
+});*/
 
 // task: defince a function inline in interact that does a new interaction
 // task: bonus: can you remove more than I did in line 31-34
 
-interact(() => console.log("Kick"));
+// interact(() => console.log("Kick"));
+
+function interactWithSomeone(anyFunctionReference, name) {
+    anyFunctionReference(name);
+}
+
+const callBackLater = (name) => console.log(`Hi, ${name}. I'm ready to help`);
+
+// interactWithSomeone(callBackLater, "Rune");
+// interactWithSomeone(callBackLater, "Bob");
+
+const helpWithWorkLater = (name) => console.log(`Hello, ${name}. Ill help with homework later`);
+
+interactWithSomeone(helpWithWorkLater, "Thomas");
+
+interactWithSomeone()
+
+interactWithSomeone(helpWithWorkLater, "Thomas");
