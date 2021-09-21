@@ -23,4 +23,9 @@ app.get("/getDay", (req, res) => {
 
 
 
-app.listen(8080);
+app.listen(8080, (error) => {
+    if (error) {
+        console.log(error);
+    }
+    console.log("The server is running on port", 8080);
+});

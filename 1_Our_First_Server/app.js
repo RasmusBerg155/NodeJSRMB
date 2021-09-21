@@ -3,6 +3,8 @@
 const app = require("express")();
 const cake = require("./cake.json")
 
+app.use(express.json());
+
 // vi skal bruge app og sætte en GET request på, med vores index til "/" og en callbackfunction med request(req) og response(res) indeni.
 app.get("/", (req, res) => {
     res.send({ });
@@ -51,6 +53,11 @@ app.get("/favoriteNumber/:number", (req, res) => {
     });
 });
 
+
+app.post("/messages", (req, res) => {
+    console.log(req.body);
+    res.send({  });
+});
 // HTTP Methos        Endpoints            Does What?
 // GET                /malwares            Retrieves all malwares
 // GET                /malwares/:1         Retrieves malware by id 1
