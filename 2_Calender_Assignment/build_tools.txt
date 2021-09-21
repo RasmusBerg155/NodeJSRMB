@@ -1,0 +1,12 @@
+Maven
+Gradle
+NuGet
+pip
+
+                          In Node:
+Maven              <=>    Npm or Yarn
+pom.xml             =>    package.json
+
+Meta-Info           => Meta-Info 
+Define dependencies => Define dependencies
+Build-steps         => Script

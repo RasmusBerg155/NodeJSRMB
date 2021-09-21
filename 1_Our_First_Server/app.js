@@ -1,12 +1,12 @@
 // const express = require("express");
 // const app = express();
 const app = require("express")();
-
+const cake = require("./cake.json")
 
 // vi skal bruge app og sætte en GET request på, med vores index til "/" og en callbackfunction med request(req) og response(res) indeni.
 app.get("/", (req, res) => {
     res.send({ });
-});
+});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
 // createa a new route on the endpoint "/adventureTime"
 // send back data (data type must be json)
@@ -22,6 +22,11 @@ app.get("/adventureTime", (req, res) => {
             weapons : "Two-handed Sword"
         }});
 });
+
+app.get("/frontpage", (req, res) => {
+    res.send("Welcome to your application");
+});
+
 
 // Vi kan sende data med Get path variable eller query variable
 
