@@ -1,5 +1,9 @@
+const { response } = require('express');
 const express = require('express');
 const app = express();
+
+
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 app.use(express.static("public"));
 
@@ -33,6 +37,19 @@ app.get("/sausage", (req, res) => {
 
 
 console.log(process.env.PORT);
+/* 
+assignment: Create an endpoint called (proxy
+and fetch the google homepage and send it to the client as response
+*/
+
+app.get("/proxy", async (req, res) => {
+/*    fetch("https://www.google.com")
+    .then(response => res.text())
+    .then(result => res.send(result)) */
+    const respone = await fetch("https://www.google.com")
+    const result = await response.text()
+    res.send(result)
+})
 
 // task allow the developer setting the port
 // task start-dev should run on port 8080
@@ -45,3 +62,5 @@ app.listen (PORT, (error) => {
     };
     console.log("Server is running on port:", PORT);
 });
+
+console.log("Last line of App.js")
