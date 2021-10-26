@@ -502,6 +502,12 @@ section .title::after{
     color: crimson;
     background: none;
 }
+
+/* Skal flyttes til venstre side */
+.contact .copyright{
+    align-items: left;
+}
+
 /* *** responsive media query start *** */
 @media(max-width: 1300px){
     .home .max-width{
