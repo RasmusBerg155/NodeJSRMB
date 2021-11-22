@@ -1,30 +1,38 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
 app.use(express.static("public"));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const pagesRouter = require("./routers/pages.js")
+import pagesRouter from './routers/pages.js'
+import dataRouter from './routers/projects.js'
 
-app.use(pagesRouter.router);
+app.use(pagesRouter);
+app.use(dataRouter);
 
-const { createPage } = require("./render.js");
-const { urlencoded } = require("express");
+// const { createPage } = require("../render.js");
+// const { urlencoded } = require("express");
 
-const frontpagePage = createPage("frontpage/frontpage.html", { 
-    title: "Nodefolio | Welcome"
-});
+// const frontpagePage = createPage("frontpage/frontpage.html", { 
+//     title: "Nodefolio | Welcome"
+// });
 
 // const projectsPage = createPage("projects/projects.html");
 
-app.get("/", (req, res) => {
-    res.send(frontpagePage);
-});
+// app.get("/", (req, res) => {
+//     res.send(frontpagePage);
+// });
+
+// app.get("/projects", (req, res) => {
+//     res.send(projectsPage);
+// });
 
 const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, (error) => {
-    console.log("Server is running on", PORT)
-})
+const server = app.listen(PORT, (error) => {
+    if (error) {
+        console.log(error);
+    }
+    console.log("Server is running on port", server.address().port);
+});

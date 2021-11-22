@@ -2,6 +2,7 @@
   "name": "nodefolio",
   "version": "0.0.1",
   "description": "A personal portfolio made in Node.js",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "start-dev": "cross-env NODE_ENV=DEV PORT=8080 nodemon app.js",
@@ -25,6 +26,8 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
   }
 }
