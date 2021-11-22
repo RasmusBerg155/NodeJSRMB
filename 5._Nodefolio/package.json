@@ -4,6 +4,7 @@
   "description": "A personal portfolio made in Node.js",
   "main": "app.js",
   "scripts": {
+    "start-dev": "cross-env NODE_ENV=DEV PORT=8080 nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,10 +23,8 @@
   },
   "homepage": "https://github.com/RasmusBerg155/NodeJSRMB/tree/main#readme",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "nodemon": "^2.0.15"
-  },
-  "devDependencies": {
-    "cross-env": "^6.3.0"
   }
 }
