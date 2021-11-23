@@ -12,6 +12,9 @@ const projectsPage = createPage("projects/projects.html", {
     title: "Nodefolio | Projects"
 });
 
+const cvPage = createPage("cv/cv.html", {
+    title: "Nodefolio | CV"
+});
 
 // HTTP 
 router.get("/", (req, res) => {
@@ -21,5 +24,10 @@ router.get("/", (req, res) => {
 router.get("/projects", (req, res) => {
     res.send(projectsPage)
 });
+
+router.get("/cv", (req, res) => {
+    res.send(cvPage)
+});
+
 
 export default router;

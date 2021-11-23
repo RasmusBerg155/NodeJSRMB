@@ -543,6 +543,32 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+
+/* *** CV styling *** */
+hr {
+    border-top: px solid #d5d5d5;
+    width: 90%;
+    margin-top: .85;
+    margin-bottom: 1rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem black;
+}
+
+hr.bottom {
+    border-top: 2px solid #535353;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.cv-viewer {
+    top: 1rem;
+    height: 50rem;
+    margin-bottom: 2rem;
+    width: 30rem;
+    position: absolute;
+    top: 15%;
+    left: 33%; 
+}
+
 /* *** responsive media query start *** */
 @media(max-width: 1300px){
     .home .max-width{
