@@ -37,7 +37,7 @@ html{
 .navbar{
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 999;   
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
@@ -132,6 +132,7 @@ html{
 .home .home-content .text-1{
     font-size: 27px;
 }
+
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
@@ -543,6 +544,43 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+/* *** Project Styling *** */
+.projects{
+    display: flex;
+    background: url("../../assets/1129115.jpg") no-repeat center;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+    justify-content: center;
+}
+.projects .max-width{
+    margin: auto 0 auto 40px;
+}
+.project-content{
+    text-align: center;
+}
+.projects .project-content .project-title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    font-family: Ubuntu, sans-serif;
+}
+.projects .project-content .project-desc{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-family: Ubuntu, sans-serif;
+}
+.projects .project-element {
+    margin-bottom: 15px;
+}
 
 /* *** CV styling *** */
 hr {

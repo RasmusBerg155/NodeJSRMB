@@ -6,10 +6,10 @@ fetch("/api/projects")
         const projectDiv = document.createElement("div");
         projectDiv.classList.add("project-element")
         projectDiv.innerHTML = `
-            <h3>${escapeHTML(project.title)}</h3>
-            <p>Category:  ${escapeHTML(project.category)}</p>
-            <p>Technologies:  ${escapeHTML(project.technologies)}</p>
-            <p>Link:<a href="https://${project.links}">GitHub</p>
+            <h3>${(project.title)}</h3>
+            <p>Category:  ${(project.category)}</p>
+            <p>Technologies:  ${(project.technologies)}</p>
+            <p>Link:<a href="https://${project.links}"></p>
         `;
         
         projectsWrapperDiv.appendChild(projectDiv);
